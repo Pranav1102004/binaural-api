@@ -1,10 +1,12 @@
 import numpy as np
 from flask import Flask, request,send_file
+from flask_cors import CORS
 import soundfile as sf
 import io
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/generate',methods = ['Post'])
 
